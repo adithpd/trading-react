@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const withdrawal = () => {
+export const Withdrawal = () => {
   return (
     <div>withdrawal</div>
   )

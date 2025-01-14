@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const activity = () => {
+export const Activity = () => {
   return (
     <div>activity</div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const searchCoin = () => {
+export const SearchCoin = () => {
   return (
     <div>searchCoin</div>
   )

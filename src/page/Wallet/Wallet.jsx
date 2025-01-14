@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const wallet = () => {
+export const Wallet = () => {
   return (
     <div>wallet</div>
   )

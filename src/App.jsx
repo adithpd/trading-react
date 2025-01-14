@@ -31,7 +31,6 @@ function App() {
         <Route path="/search" element={<SearchCoin/>}/>
         <Route path="/*" element={<NotFound/>}/>
       </Routes>
-      <Home/>
     </>
   )
 }
