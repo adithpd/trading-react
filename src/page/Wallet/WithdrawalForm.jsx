@@ -1,6 +1,8 @@
 import React from 'react'
 import { Input } from "@/components/ui/input"
-
+import { Button } from "@/components/ui/button"
+import { DialogClose } from "@/components/ui/dialog"
+import goldmanSachsLogo from "../../assets/icons_custom/goldman.svg"
 
 export const WithdrawalForm = () => {
   const [amount, setAmount] = React.useState('');
@@ -11,7 +13,7 @@ export const WithdrawalForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(amount, paymentMethod);
+    console.log(amount);
   }
 
   return (
@@ -29,10 +31,18 @@ export const WithdrawalForm = () => {
       <div>
         <p className="pb-2">Transfer To</p>
         <div className="flex items-center gap-5 border px-5 py-2 rounded-md">
-          <img className="h-8 w-8" src="" alt=""/>
+          <img className="h-14 w-14" src={goldmanSachsLogo} alt=""/>
+          <div>
+            <p className="text-xl font-bold">Goldman Sachs</p>
+            <p className="text-xs">************1651</p>
+          </div>
         </div>
-        <p className="text-xl font-bold">Barclays</p>
       </div>
+      <DialogClose className="w-full">
+        <Button onClick={handleSubmit} className="w-full py-7 text-xl">
+          Withdraw
+        </Button>
+      </DialogClose>
     </div>
   )
 }
