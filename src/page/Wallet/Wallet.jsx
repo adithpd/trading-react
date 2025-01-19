@@ -2,10 +2,11 @@ import React from 'react'
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { CopyIcon, DollarSign, ShuffleIcon, UploadIcon, WalletIcon, ArrowDownCircle } from 'lucide-react'
-import { ReloadIcon } from '@radix-ui/react-icons'
+import { ReloadIcon, UpdateIcon } from '@radix-ui/react-icons'
 import { TopupForm } from './TopupForm';
 import { WithdrawalForm } from './WithdrawalForm';
 import { TransferForm } from './TransferForm';
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 
 export const Wallet = () => {
@@ -91,6 +92,36 @@ export const Wallet = () => {
             </div>
           </CardContent>
         </Card>
+
+        <div className="py-5 pt-10">
+          <div className="flex gap-2 items-center pb-5">
+            <h1 className="text-2xl font-semibold">History</h1>
+            <UpdateIcon className="h-7 w-7 cursor-pointer hover:text-gray-400"/>
+          </div>
+
+          <div className="space-y-5">
+            {[1,1,1,1,1,1,1].map((item,i) => 
+              <div key={i}>
+                <Card className="px-5 flex justify-between items-center">
+                  <div className="flex items-center gap-5">
+                    <Avatar>
+                      <AvatarFallback>
+                        <ShuffleIcon className=""/>
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="space-y-1">
+                      <h1>Buy Asset</h1>
+                      <p className="text-sm text-gray-500">2024-06-02</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className={`text-green-500`}>999 USD</p>
+                  </div>
+                </Card>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )
